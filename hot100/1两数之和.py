@@ -28,21 +28,21 @@ target = 6
 #             break
 
 # 哈希法（用空间来换取时间）
-'''
-    核心思想：空间换时间，遍历数组时，把已经遍历过的数字存起来，方便快速进行查找
-    关键：对于当前数num来说，我们需要找到的是target-num。在之前遍历过的数中来查找target-num
-    如果找不到的话，那就进行下一个num，并把当前num保存在哈希表（字典）中
+# '''
+#     核心思想：空间换时间，遍历数组时，把已经遍历过的数字存起来，方便快速进行查找
+#     关键：对于当前数num来说，我们需要找到的是target-num。在之前遍历过的数中来查找target-num
+#     如果找不到的话，那就进行下一个num，并把当前num保存在哈希表（字典）中
     
-    注意，最后要返回的是两个数字的index
-'''
-# 创建一个字典来保存遍历过的数字以及对应的index
-dict = {}
-for i,num in enumerate(nums):
-    # aim用来表示另一个数字
-    aim = target - num
-    # 查找在遍历过的数字中是否存在aim
-    if aim in dict:
-        print([dict[aim], i])
+#     注意，最后要返回的是两个数字的index
+# '''
+# # 创建一个字典来保存遍历过的数字以及对应的index
+# dict = {}
+# for i,num in enumerate(nums):
+#     # aim用来表示另一个数字
+#     aim = target - num
+#     # 查找在遍历过的数字中是否存在aim
+#     if aim in dict:
+#         print([dict[aim], i])
 
-    # 如果没有找到就继续进行遍历，并把当前num存入字典中
-    dict[num] = i
+#     # 如果没有找到就继续进行遍历，并把当前num存入字典中
+#     dict[num] = i
